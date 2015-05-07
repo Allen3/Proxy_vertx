@@ -72,8 +72,7 @@ public class Proxy extends AbstractVerticle {
                     c_req.setChunked(true);
                 }
             }
-
-            //c_req.setChunked(true);
+            
             c_req.headers().setAll(req.headers());
             req.handler(data -> {
                 System.out.println("Proxying request body " + data.toString("ISO-8859-1"));
